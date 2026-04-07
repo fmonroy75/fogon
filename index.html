@@ -3,66 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>El Fogón de la Llave | Eventos Campestres en Penco</title>
+  <title>El Fogón de la Llave | Eventos Campestres en Penco | Cabañas con Tinajas</title>
+  
+  <!-- Meta descripción (150-160 caracteres) -->
+  <meta name="description" content="El Fogón de la Llave: emprendimiento familiar en Penco. Centro de eventos campestres, 2 cabañas con tinajas de agua caliente, fogón, parrillas y áreas verdes. ¡Cotiza tu celebración!">
+  
+  <!-- Meta keywords (opcional pero útil) -->
+  <meta name="keywords" content="eventos campestres Penco, centro de eventos Penco, cabañas con tinajas, fogón de la llave, celebraciones familiares, día de campo Penco, Región del Biobío">
+  
+  <!-- Autor y copyright -->
+  <meta name="author" content="El Fogón de la Llave - ingeniumbright">
+  <meta name="copyright" content="© 2026 El Fogón de la Llave">
+  
+  <!-- Robots: permitir indexación y seguimiento de enlaces -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  
+  <!-- Geo localización -->
+  <meta name="geo.placename" content="Penco, Región del Biobío, Chile">
+  <meta name="geo.region" content="CL-BI">
+  <meta name="geo.position" content="-36.71629087227119;-72.89562172488634">
+  <meta name="ICBM" content="-36.71629087227119, -72.89562172488634">
+  
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:title" content="El Fogón de la Llave | Eventos Campestres en Penco">
+  <meta property="og:description" content="Espacio privado para celebraciones, 2 cabañas con tinajas de agua caliente, fogón y áreas verdes. Vive un día inolvidable en familia.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.elfogondelallave.cl">
+  <meta property="og:image" content="https://www.elfogondelallave.cl/assets/ico/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:site_name" content="El Fogón de la Llave">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="El Fogón de la Llave | Eventos Campestres en Penco">
+  <meta name="twitter:description" content="Centro de eventos campestres, cabañas con tinajas, fogón y parrillas. Cotiza tu celebración familiar.">
+  <meta name="twitter:image" content="https://www.elfogondelallave.cl/assets/ico/og.png">
+  
+  <!-- Verificación de Google Search Console (reemplazar con tu código) -->
+  <meta name="google-site-verification" content="TU_CODIGO_DE_VERIFICACION">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.elfogondelallave.cl">
+  
+  <!-- Alternate idioma (si aplica) -->
+  <link rel="alternate" hreflang="es" href="https://www.elfogondelallave.cl">
+  
+  
   <!-- Tailwind CSS + Google Fonts + Font Awesome -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * { font-family: 'Inter', sans-serif; }
-    html { scroll-behavior: smooth; }
-    .glow-text { text-shadow: 0 0 8px rgba(255,215,0,0.6), 0 0 20px rgba(255,215,0,0.3); }
-    .btn-glow:hover { box-shadow: 0 0 15px rgba(234, 179, 8, 0.6), 0 0 5px rgba(234, 179, 8, 0.4); transition: all 0.25s ease-in-out; }
-    .card-hover { transition: transform 0.3s ease, box-shadow 0.4s ease; }
-    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 35px -12px rgba(0,0,0,0.25), 0 0 0 1px rgba(234,179,8,0.2); }
-    .hero-gradient {
-      background: linear-gradient(105deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%),
-                  url('https://images.pexels.com/photos/1749303/pexels-photo-1749303.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
-    }
-    .section-fade { animation: fadeUp 0.8s ease-out forwards; }
-    @keyframes fadeUp { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
-    .delay-100 { animation-delay: 0.1s; }
-    .delay-200 { animation-delay: 0.2s; }
-    .footer-glow a:hover .fab, .footer-glow a:hover .fa-heart { text-shadow: 0 0 8px #eab308, 0 0 12px #eab308; }
-    .whatsapp-card {
-      background: rgba(15, 18, 25, 0.8);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(234, 179, 8, 0.3);
-      transition: all 0.3s;
-    }
-    .whatsapp-card:hover { border-color: rgba(234, 179, 8, 0.7); box-shadow: 0 20px 30px -12px rgba(0,0,0,0.4); }
-    .whatsapp-btn-main {
-      background: #25D366;
-      transition: all 0.2s ease;
-      box-shadow: 0 5px 15px -5px #25D36680;
-    }
-    .whatsapp-btn-main:hover { background: #128C7E; transform: scale(1.02); box-shadow: 0 8px 25px -5px #25D366; }
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #1e1f25; }
-    ::-webkit-scrollbar-thumb { background: #eab308; border-radius: 10px; }
-    .gallery-item {
-      transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-    }
-    .gallery-item:hover {
-      transform: scale(1.02);
-      box-shadow: 0 20px 30px -15px rgba(0,0,0,0.5);
-    }
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%; /* 16:9 */
-      height: 0;
-      overflow: hidden;
-      border-radius: 1rem;
-    }
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 1rem;
-    }
-  </style>
+  <!-- Favicon -->
+<link rel="icon" href="assets/ico/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="assets/ico/favicon.svg">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/ico/favicon-16x16.png">
+
+<link rel="icon" type="image/png" sizes="48x48" href="assets/ico/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/ico/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/ico/android-chrome-512x512.png">
+
+<link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Datos estructurados JSON-LD (Schema.org) para SEO avanzado -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "El Fogón de la Llave",
+    "alternateName": "Centro de Eventos Campestres El Fogón",
+    "description": "Emprendimiento familiar ubicado en Primer Agua, Penco, especializado en eventos campestres, cabañas con tinajas de agua caliente y celebraciones familiares.",
+    "url": "https://www.elfogondelallave.cl",
+    "logo": "https://www.elfogondelallave.cl/assets/img/logo.jpg",
+    "image": "https://www.elfogondelallave.cl/assets/ico/og.png",
+    "telephone": "+56994390259",
+    "email": "contacto@elfogondelallave.cl",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kilómetro 10.95, Primer Agua Abajo",
+      "addressLocality": "Penco",
+      "addressRegion": "Región del Biobío",
+      "addressCountry": "Chile"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-36.71629087227119",
+      "longitude": "-72.89562172488634"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "10:00",
+      "closes": "20:00"
+    },
+    "sameAs": [
+      "https://www.instagram.com/elfogondelallave",
+      "https://www.facebook.com/elfogondelallave",
+      "https://www.tiktok.com/@elfogondelallave"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "telephone": "+56994390259",
+      "contactOption": "TollFree",
+      "areaServed": "CL",
+      "availableLanguage": "Spanish"
+    },
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Centro de Eventos Campestres",
+          "description": "Espacio privado para celebraciones familiares, cumpleaños, aniversarios y reuniones de amigos."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Accommodation",
+          "name": "Cabañas con Tinajas",
+          "description": "2 cabañas familiares con tinajas de agua caliente exclusivas."
+        }
+      }
+    ]
+  }
+  </script>
+
+<meta name="theme-color" content="#ff6a00">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-[#0a0c10] text-gray-200 antialiased">
 
@@ -233,11 +308,11 @@
         <!-- Foto 5: Quincho / Salón de eventos -->
         <div class="gallery-item bg-black/40 rounded-2xl overflow-hidden border border-white/10 hover:border-amber-500/50 transition-all duration-300">
           <div class="aspect-[4/3] overflow-hidden">
-            <img src="assets/img/" alt="Quincho" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+            <img src="assets/img/DSC01100.jpg" alt="Quincho" class="w-full h-full object-cover transition duration-500 hover:scale-110">
           </div>
           <div class="p-4">
-            <h3 class="font-bold text-lg text-amber-400">Quincho La Llave</h3>
-            <p class="text-gray-400 text-sm">Espacio techado y equipado para tus celebraciones</p>
+            <h3 class="font-bold text-lg text-amber-400">Vista aerea</h3>
+            <p class="text-gray-400 text-sm">Espacio para disfrutar al aire libre</p>
           </div>
         </div>
         
@@ -269,7 +344,7 @@
         <!-- Video 1: Tour por las instalaciones (YouTube embed) -->
         <div class="bg-black/40 rounded-2xl overflow-hidden border border-white/10 hover:border-amber-500/50 transition-all duration-300">
           <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder1" title="Tour por las instalaciones" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="assets/img/VID-20260406-WA0103.mp4" title="instalaciones" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
           <div class="p-5">
             <h3 class="font-bold text-xl text-amber-400">Tour por El Fogón de la Llave</h3>
@@ -284,19 +359,19 @@
         <!-- Video 2: Evento familiar / día de campo -->
         <div class="bg-black/40 rounded-2xl overflow-hidden border border-white/10 hover:border-amber-500/50 transition-all duration-300">
           <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder2" title="Evento familiar en El Fogón" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="assets/img/VID-20260406-WA0097.mp4" title="Piscina El Fogón" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
           <div class="p-5">
-            <h3 class="font-bold text-xl text-amber-400">Día de Campo Familiar</h3>
-            <p class="text-gray-400 mt-2">Mira cómo familias enteras disfrutan de un día rodeados de naturaleza y buena comida.</p>
+            <h3 class="font-bold text-xl text-amber-400">Para refrescarse</h3>
+            <p class="text-gray-400 mt-2">Mira nuestra piscina, esperandote en aquellos dias de calor</p>
             <div class="flex items-center gap-2 mt-3 text-sm text-gray-500">
               <i class="fas fa-users text-amber-400"></i>
-              <span>Ideal para reuniones y celebraciones</span>
+              <span>Ideal para refrescarse y tomar el sol</span>
             </div>
           </div>
         </div>
         
-        <!-- Video 3: Tinajas y relajación -->
+        <!-- Video 3: Tinajas y relajación - ->
         <div class="bg-black/40 rounded-2xl overflow-hidden border border-white/10 hover:border-amber-500/50 transition-all duration-300">
           <div class="video-wrapper">
             <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder3" title="Tinajas de agua caliente" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -311,7 +386,7 @@
           </div>
         </div>
         
-        <!-- Video 4: Testimonio o celebración especial -->
+        <! -- Video 4: Testimonio o celebración especial - ->
         <div class="bg-black/40 rounded-2xl overflow-hidden border border-white/10 hover:border-amber-500/50 transition-all duration-300">
           <div class="video-wrapper">
             <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder4" title="Celebraciones en El Fogón" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -327,12 +402,12 @@
         </div>
       </div>
       
-      <!-- Mensaje adicional: ¿Tienes un video de tu evento? -->
+      <!- - Mensaje adicional: ¿Tienes un video de tu evento? - ->
       <div class="text-center mt-12 p-6 bg-amber-500/10 rounded-2xl border border-amber-500/20 max-w-2xl mx-auto">
         <i class="fas fa-camera text-amber-400 text-3xl mb-3 block"></i>
         <p class="text-gray-300">¿Celebraste con nosotros y quieres compartir tu video? <br> 
         <span class="text-amber-400">¡Contáctanos y aparece en nuestra galería!</span></p>
-      </div>
+      </div>-->
     </div>
   </section>
 
@@ -416,21 +491,22 @@
   </footer>
 
   <!-- Botón flotante de WhatsApp -->
-  <a href="https://wa.me/56994390259?text=Hola%20El%20Fogón%20de%20la%20Llave,%20me%20interesa%20un%20evento" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl shadow-green-600/40 hover:bg-green-600 transition-all z-50 flex items-center justify-center gap-2 group animate-bounce-slow">
-    <i class="fab fa-whatsapp text-2xl"></i>
-    <span class="hidden md:inline-block bg-black/70 text-xs px-2 py-1 rounded-full absolute right-full mr-2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition">¡Escríbenos!</span>
-  </a>
+  <a href="https://wa.me/56994390259?text=Hola%20El%20Fogón%20de%20la%20Llave,%20me%20interesa%20un%20evento" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-float group" aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp text-2xl" aria-hidden="true"></i>
+    <!-- Elementos para efecto fuego -->
+    <!--<span class="flame-left">🔥</span>
+    <span class="flame-right">🔥</span>-->
+    <span class="spark"></span>
+    <span class="spark"></span>
+    <span class="spark"></span>
+    <span class="spark"></span>
+    <span class="spark"></span>
+    <span class="spark"></span>
+    <span class="tooltip-text">¡Escríbenos! 🔥</span>
+</a>
 
-  <style>
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
-    }
-    .animate-bounce-slow {
-      animation: bounce 2s infinite;
-    }
-  </style>
-
+<script src="assets/js/scripts.js"></script>
+<!--
   <script>
     const mobileBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -440,6 +516,6 @@
     document.querySelectorAll('#mobileMenu a').forEach(link => {
       link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
     });
-  </script>
+  </script>-->
 </body>
 </html>
