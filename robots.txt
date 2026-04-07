@@ -1,0 +1,78 @@
+# ============================================
+# ROBOTS.TXT - El Fogón de la Llave
+# Dominio: www.elfogondelallave.cl
+# ============================================
+
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+
+# Desallow: áreas administrativas (si existieran)
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /logs/
+
+# Sitemap
+Sitemap: https://www.elfogondelallave.cl/sitemap.xml
+
+# Crawl delay (para no sobrecargar el servidor)
+Crawl-delay: 1
+
+# Host (para Google)
+Host: https://www.elfogondelallave.cl
+
+# ============================================
+# Reglas específicas para bots importantes
+# ============================================
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Googlebot Images (para indexar imágenes)
+User-agent: Googlebot-Image
+Allow: /assets/img/
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Yahoo
+User-agent: Yahoo!
+Allow: /
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Baidu (rastreador chino)
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# Ahrefs (herramienta SEO)
+User-agent: AhrefsBot
+Disallow: /
+
+# Semrush
+User-agent: SemrushBot
+Disallow: /
+
+# ============================================
+# Reglas para evitar contenido duplicado
+# ============================================
+
+User-agent: *
+Disallow: /*?*
+Disallow: /#*
