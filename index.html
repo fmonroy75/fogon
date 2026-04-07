@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>El Fogón de la Llave | Eventos Campestres</title>
+  <title>El Fogón de la Llave | Eventos Campestres en Penco</title>
   <!-- Tailwind CSS + Google Fonts + Font Awesome -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -40,7 +40,28 @@
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: #1e1f25; }
     ::-webkit-scrollbar-thumb { background: #eab308; border-radius: 10px; }
-    .text-cursive { font-style: italic; letter-spacing: -0.01em; }
+    .gallery-item {
+      transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+    .gallery-item:hover {
+      transform: scale(1.02);
+      box-shadow: 0 20px 30px -15px rgba(0,0,0,0.5);
+    }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+      border-radius: 1rem;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+    }
   </style>
 </head>
 <body class="bg-[#0a0c10] text-gray-200 antialiased">
@@ -52,13 +73,14 @@
         <img src="assets/img/logo.jpg" alt="Logo El Fogón de la Llave" class="w-12 h-12 md:w-14 md:h-14 object-contain rounded-xl shadow-md shadow-amber-500/20" onerror="this.onerror=null; this.src='https://placehold.co/200x200?text=FOGON&bg=0a0c10&color=eab308';">
         <div>
           <h1 class="text-xl md:text-2xl font-bold tracking-tight bg-gradient-to-r from-white via-amber-200 to-amber-400 bg-clip-text text-transparent">El Fogón de la Llave</h1>
-          <p class="text-xs text-amber-400/80 font-medium tracking-wider">EVENTOS CAMPESTRES</p>
+          <p class="text-xs text-amber-400/80 font-medium tracking-wider">EVENTOS CAMPESTRES | PENCO</p>
         </div>
       </div>
       <div class="hidden md:flex gap-8 text-sm font-semibold">
         <a href="#inicio" class="hover:text-amber-400 transition-colors duration-300">INICIO</a>
-        <a href="#servicios" class="hover:text-amber-400 transition-colors duration-300">SERVICIOS</a>
-        <a href="#galeria" class="hover:text-amber-400 transition-colors duration-300">GALERÍA</a>
+        <a href="#nosotros" class="hover:text-amber-400 transition-colors duration-300">NOSOTROS</a>
+        <a href="#instalaciones" class="hover:text-amber-400 transition-colors duration-300">INSTALACIONES</a>
+        <a href="#videos" class="hover:text-amber-400 transition-colors duration-300">VIDEOS</a>
         <a href="#contacto" class="hover:text-amber-400 transition-colors duration-300">CONTACTO</a>
       </div>
       <div class="md:hidden">
@@ -67,114 +89,254 @@
     </div>
     <div id="mobileMenu" class="hidden md:hidden bg-black/90 backdrop-blur-lg border-t border-white/10 py-4 px-6 flex flex-col gap-4 text-sm font-semibold">
       <a href="#inicio" class="hover:text-amber-400">INICIO</a>
-      <a href="#servicios" class="hover:text-amber-400">SERVICIOS</a>
-      <a href="#galeria" class="hover:text-amber-400">GALERÍA</a>
+      <a href="#nosotros" class="hover:text-amber-400">NOSOTROS</a>
+      <a href="#instalaciones" class="hover:text-amber-400">INSTALACIONES</a>
+      <a href="#videos" class="hover:text-amber-400">VIDEOS</a>
       <a href="#contacto" class="hover:text-amber-400">CONTACTO</a>
     </div>
   </nav>
 
-  <!-- HERO con el nuevo texto integrado de manera destacada -->
+  <!-- HERO -->
   <section id="inicio" class="relative min-h-screen flex items-center hero-gradient pt-28 md:pt-32">
     <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30"></div>
     <div class="relative max-w-7xl mx-auto px-6 md:px-12 text-center md:text-left z-10">
       <div class="max-w-4xl mx-auto md:mx-0">
         <div class="inline-block px-4 py-1 rounded-full bg-amber-500/20 border border-amber-400/40 backdrop-blur-sm text-amber-300 text-xs font-semibold tracking-wider mb-5 animate-pulse">
-          ✦ Ponemos de moda la Felicidad ✦
+          ✦ PONEMOS DE MODA LA FELICIDAD ✦
         </div>
         <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
           <span class="bg-gradient-to-r from-white via-amber-300 to-amber-500 bg-clip-text text-transparent">El Fogón que une</span><br>
           <span class="text-amber-400 glow-text">tus celebraciones</span>
         </h1>
-        <!-- Texto principal solicitado -->
+        
         <div class="mt-8 p-6 bg-black/30 backdrop-blur-sm rounded-2xl border-l-4 border-amber-500 text-left">
-          <p class="text-gray-100 text-lg md:text-xl leading-relaxed font-medium">
-            "El Fogon de la Llave: es un emprendimiento familiar, ubicado en el sector rural de Primer Agua en Penco, Region del Bio-Bio, que se especializa en ofrecer un espacio privado para celebracionesy recreacion en un entorno natural y rustico.
-            Princioalmente funcionamos como centro de eventos para tus celebraciones familiares y de grupos de amigosque quieran pasar un lindo dia de campo con rica comida y buena musica.
-            Adicionalmente contamos con 2 cabanas para descanso familiar con uso exclusivo de tinajas de agua caliente."
+          <p class="text-gray-100 text-lg md:text-xl leading-relaxed">
+            <span class="text-amber-400 font-bold">El Fogón de la Llave</span> es un <span class="font-semibold">emprendimiento familiar</span>, ubicado en el sector rural de 
+            <span class="text-amber-300">Primer Agua en Penco, Región del Biobío</span>, que se especializa en ofrecer un espacio privado para 
+            celebraciones y recreación en un entorno natural y rústico.
           </p>
-         <!-- <div class="mt-3 flex justify-end">
-            <i class="fas fa-fire text-amber-400 text-xl"></i>
-          </div>-->
+          <p class="text-gray-100 text-lg md:text-xl leading-relaxed mt-4">
+            Principalmente funcionamos como <span class="font-semibold">centro de eventos</span> para tus celebraciones familiares y de grupos de amigos 
+            que quieran pasar un lindo día de campo con rica comida y buena música.
+          </p>
+          <p class="text-gray-100 text-lg md:text-xl leading-relaxed mt-4">
+            Adicionalmente contamos con <span class="text-amber-400 font-bold">2 cabañas</span> para descanso familiar con uso exclusivo de 
+            <span class="font-semibold">tinajas de agua caliente</span>.
+          </p>
         </div>
+
         <div class="flex flex-wrap gap-5 mt-10 justify-center md:justify-start">
           <a href="https://wa.me/56994390259?text=Hola%20El%20Fogón%20de%20la%20Llave,%20me%20interesa%20un%20evento" target="_blank" class="px-8 py-3 bg-amber-500 hover:bg-amber-600 text-black font-bold rounded-full transition-all shadow-xl shadow-amber-600/20 btn-glow flex items-center gap-2"><i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp</a>
-          <!--<a href="#servicios" class="px-8 py-3 bg-transparent border border-amber-400/70 text-amber-400 font-semibold rounded-full hover:bg-amber-400/10 transition-all"><i class="fas fa-chevron-down"></i> Nuestros servicios</a>-->
         </div>
       </div>
     </div>
   </section>
-<!--
-  <! -- SERVICIOS con temática de fogón y campo -- >
-  <section id="servicios" class="py-24 px-6 bg-gradient-to-b from-[#0a0c10] to-[#11131a]">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <span class="text-amber-400 tracking-widest text-sm font-semibold uppercase bg-amber-400/10 px-4 py-1 rounded-full">Experiencias alrededor del fuego</span>
-        <h2 class="text-4xl md:text-5xl font-bold mt-5 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Servicios con esencia campestre</h2>
+
+  <!-- SECCIÓN NOSOTROS -->
+  <section id="nosotros" class="py-20 px-6 bg-gradient-to-b from-[#0a0c10] to-[#11131a]">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <span class="text-amber-400 tracking-widest text-sm font-semibold uppercase bg-amber-400/10 px-4 py-1 rounded-full">Nuestro Espacio</span>
+        <h2 class="text-4xl md:text-5xl font-bold mt-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Un lugar para celebrar la vida</h2>
         <div class="w-24 h-1 bg-amber-500 mx-auto mt-5 rounded-full"></div>
       </div>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 card-hover section-fade">
-          <div class="w-16 h-16 bg-amber-500/20 rounded-2xl flex items-center justify-center mb-6"><i class="fas fa-fire text-3xl text-amber-400"></i></div>
-          <h3 class="text-2xl font-bold mb-3">Fogón & Asados</h3>
-          <p class="text-gray-400">Cocina a la vista con parrillas y fogón central. Ideal para celebraciones rústicas con sabor a campo y tradición.</p>
+      
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="space-y-5">
+          <div class="flex items-start gap-4">
+            <i class="fas fa-tree text-3xl text-amber-400 mt-1"></i>
+            <div>
+              <h3 class="text-xl font-bold">Entorno Natural y Rústico</h3>
+              <p class="text-gray-400">Disfruta de la tranquilidad del campo, rodeado de vegetación y aire puro, el escenario perfecto para tus eventos.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <i class="fas fa-calendar-alt text-3xl text-amber-400 mt-1"></i>
+            <div>
+              <h3 class="text-xl font-bold">Eventos Personalizados</h3>
+              <p class="text-gray-400">Cumpleaños, aniversarios, reuniones familiares o con amigos. Creamos el ambiente ideal para cada ocasión.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <i class="fas fa-hot-tub text-3xl text-amber-400 mt-1"></i>
+            <div>
+              <h3 class="text-xl font-bold">Cabañas con Tinajas</h3>
+              <p class="text-gray-400">2 acogedoras cabañas con tinajas de agua caliente exclusivas para el descanso familiar.</p>
+            </div>
+          </div>
         </div>
-        <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 card-hover section-fade delay-100">
-          <div class="w-16 h-16 bg-amber-500/20 rounded-2xl flex items-center justify-center mb-6"><i class="fas fa-ring text-3xl text-amber-400"></i></div>
-          <h3 class="text-2xl font-bold mb-3">Bodas Campestres</h3>
-          <p class="text-gray-400">Ceremonia al aire libre, decoración floral silvestre, cena con fogón y salón de madera para bailar bajo las estrellas.</p>
-        </div>
-        <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 card-hover section-fade delay-200">
-          <div class="w-16 h-16 bg-amber-500/20 rounded-2xl flex items-center justify-center mb-6"><i class="fas fa-tree text-3xl text-amber-400"></i></div>
-          <h3 class="text-2xl font-bold mb-3">Fiestas Privadas</h3>
-          <p class="text-gray-400">Cumpleaños, aniversarios y reuniones familiares con zonas de juegos, quincho y atmósfera campestre exclusiva.</p>
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-amber-500/30 h-80">
+          <img src="assets/img/DSC01007.jpg" alt="Cabaña rústica y tinajas" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-5">
+            <p class="text-white font-semibold">Disfruta de nuestras tinajas de agua caliente</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!- - GALERÍA CAMPESTRE (imágenes verdes, fogones, naturaleza) - ->
-  <section id="galeria" class="py-24 px-6 bg-[#0f1118]">
+  <!-- SECCIÓN GALERÍA DE INSTALACIONES (Fotos) -->
+  <section id="instalaciones" class="py-24 px-6 bg-[#0f1118]">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-14">
-        <span class="text-amber-400 tracking-wider text-sm font-semibold uppercase">inspiración natural</span>
-        <h2 class="text-4xl md:text-5xl font-bold mt-3 text-white">Rincones <span class="text-amber-400">con alma de fogón</span></h2>
+        <span class="text-amber-400 tracking-wider text-sm font-semibold uppercase bg-amber-400/10 px-4 py-1 rounded-full">Descubre nuestro espacio</span>
+        <h2 class="text-4xl md:text-5xl font-bold mt-3 text-white">Galería de <span class="text-amber-400">Instalaciones</span></h2>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Conoce cada rincón de El Fogón de la Llave, diseñado para que vivas momentos inolvidables</p>
+        <div class="w-24 h-1 bg-amber-500 mx-auto mt-5 rounded-full"></div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="group relative overflow-hidden rounded-2xl shadow-2xl aspect-[4/3] cursor-pointer">
-          <img src="https://images.pexels.com/photos/3944311/pexels-photo-3944311.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Fogón campestre" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-5"><p class="text-white font-semibold">Fogón Principal</p></div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Foto 1: Comedor -->
+        <div class="gallery-item bg-black/40 rounded-2xl overflow-hidden border border-white/10 hover:border-amber-500/50 transition-all duration-300">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/DSC01061.jpg" alt="Comedor" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-lg text-amber-400">Comedor</h3>
+            <p class="text-gray-400 text-sm">El corazón de nuestras celebraciones, ideal para compartir alrededor del fuego</p>
+          </div>
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-2xl aspect-[4/3] cursor-pointer">
-          <img src="https://images.pexels.com/photos/162921/pexels-photo-162921.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Mesa campestre" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-5"><p class="text-white font-semibold">Rincón de Parrilla</p></div>
+        
+        <!-- Foto 2: Piscina -->
+        <div class="gallery-item bg-black/40 rounded-2xl overflow-hidden border border-white/10 hover:border-amber-500/50 transition-all duration-300">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/DSC00994.jpg" alt="Zona de parrillas" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-lg text-amber-400">Piscina</h3>
+            <p class="text-gray-400 text-sm">Piscina para refrescarse</p>
+          </div>
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-2xl aspect-[4/3] cursor-pointer">
-          <img src="https://images.pexels.com/photos/1406411/pexels-photo-1406411.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Quincho" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end p-5"><p class="text-white font-semibold">Quincho La Llave</p></div>
+        
+        <!-- Foto 3: Cabañas -->
+        <div class="gallery-item bg-black/40 rounded-2xl overflow-hidden border border-white/10 hover:border-amber-500/50 transition-all duration-300">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/DSC01034.jpg" alt="Cabañas" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-lg text-amber-400">Nuestras Cabañas</h3>
+            <p class="text-gray-400 text-sm">2 acogedoras cabañas con todas las comodidades para tu descanso</p>
+          </div>
+        </div>
+        
+        <!-- Foto 4: Tinajas de agua caliente -->
+        <div class="gallery-item bg-black/40 rounded-2xl overflow-hidden border border-white/10 hover:border-amber-500/50 transition-all duration-300">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/DSC01007.jpg" alt="Tinajas de agua caliente" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-lg text-amber-400">Tinajas Exclusivas</h3>
+            <p class="text-gray-400 text-sm">Relajación total con agua caliente en un entorno natural</p>
+          </div>
+        </div>
+        
+        <!-- Foto 5: Quincho / Salón de eventos -->
+        <div class="gallery-item bg-black/40 rounded-2xl overflow-hidden border border-white/10 hover:border-amber-500/50 transition-all duration-300">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/" alt="Quincho" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-lg text-amber-400">Quincho La Llave</h3>
+            <p class="text-gray-400 text-sm">Espacio techado y equipado para tus celebraciones</p>
+          </div>
+        </div>
+        
+        <!-- Foto 6: Áreas verdes -->
+        <div class="gallery-item bg-black/40 rounded-2xl overflow-hidden border border-white/10 hover:border-amber-500/50 transition-all duration-300">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/DSC01015.jpg" alt="Áreas verdes" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-lg text-amber-400">Áreas Verdes</h3>
+            <p class="text-gray-400 text-sm">Extensos jardines para que los niños jueguen y los adultos descansen</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!- - SECCIÓN DE MOTIVOS (destacando el texto otra vez como recordatorio) -- >
-  <section class="py-16 px-6 bg-gradient-to-r from-amber-900/20 to-transparent">
-    <div class="max-w-5xl mx-auto text-center">
-      <div class="inline-block p-1 px-4 rounded-full bg-amber-500/20 text-amber-300 text-sm mb-4">✨ Un lugar con propósito ✨</div>
-      <div class="bg-black/30 rounded-2xl p-8 md:p-10 border border-amber-500/20 shadow-2xl">
-        <i class="fas fa-quote-left text-4xl text-amber-400/50 mb-4 block"></i>
-        <p class="text-xl md:text-2xl font-light italic text-gray-200 leading-relaxed">
-          "Sabemos que siempre existe un buen motivo y deseos para celebrar en familia y amigos. 
-          Tenemos un lugar y la atención que mereces en un entorno campestre para vivir un día 
-          que dejará los mejores recuerdos. Contáctanos y no te arrepentirás."
-        </p>
-        <div class="mt-6 flex justify-center gap-2 text-amber-400">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+  <!-- SECCIÓN GALERÍA DE VIDEOS -->
+  <section id="videos" class="py-24 px-6 bg-gradient-to-b from-[#0a0c10] to-[#11131a]">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <span class="text-amber-400 tracking-wider text-sm font-semibold uppercase bg-amber-400/10 px-4 py-1 rounded-full">Vive la experiencia</span>
+        <h2 class="text-4xl md:text-5xl font-bold mt-3 text-white">Galería de <span class="text-amber-400">Videos</span></h2>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Mira cómo se vive un día inolvidable en El Fogón de la Llave</p>
+        <div class="w-24 h-1 bg-amber-500 mx-auto mt-5 rounded-full"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Video 1: Tour por las instalaciones (YouTube embed) -->
+        <div class="bg-black/40 rounded-2xl overflow-hidden border border-white/10 hover:border-amber-500/50 transition-all duration-300">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder1" title="Tour por las instalaciones" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-xl text-amber-400">Tour por El Fogón de la Llave</h3>
+            <p class="text-gray-400 mt-2">Recorre nuestras instalaciones y descubre cada espacio diseñado para tu celebración.</p>
+            <div class="flex items-center gap-2 mt-3 text-sm text-gray-500">
+              <i class="fas fa-play-circle text-amber-400"></i>
+              <span>Conoce nuestras cabañas, quincho y áreas verdes</span>
+            </div>
+          </div>
         </div>
+        
+        <!-- Video 2: Evento familiar / día de campo -->
+        <div class="bg-black/40 rounded-2xl overflow-hidden border border-white/10 hover:border-amber-500/50 transition-all duration-300">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder2" title="Evento familiar en El Fogón" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-xl text-amber-400">Día de Campo Familiar</h3>
+            <p class="text-gray-400 mt-2">Mira cómo familias enteras disfrutan de un día rodeados de naturaleza y buena comida.</p>
+            <div class="flex items-center gap-2 mt-3 text-sm text-gray-500">
+              <i class="fas fa-users text-amber-400"></i>
+              <span>Ideal para reuniones y celebraciones</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Video 3: Tinajas y relajación -->
+        <div class="bg-black/40 rounded-2xl overflow-hidden border border-white/10 hover:border-amber-500/50 transition-all duration-300">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder3" title="Tinajas de agua caliente" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-xl text-amber-400">Tinajas de Agua Caliente</h3>
+            <p class="text-gray-400 mt-2">La experiencia de relajación en nuestras tinajas exclusivas, rodeado de naturaleza.</p>
+            <div class="flex items-center gap-2 mt-3 text-sm text-gray-500">
+              <i class="fas fa-hot-tub text-amber-400"></i>
+              <span>Perfecto para cerrar el día</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Video 4: Testimonio o celebración especial -->
+        <div class="bg-black/40 rounded-2xl overflow-hidden border border-white/10 hover:border-amber-500/50 transition-all duration-300">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder4" title="Celebraciones en El Fogón" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-xl text-amber-400">Momentos que Dejan Huella</h3>
+            <p class="text-gray-400 mt-2">Testimonios y recuerdos de quienes han celebrado con nosotros.</p>
+            <div class="flex items-center gap-2 mt-3 text-sm text-gray-500">
+              <i class="fas fa-heart text-amber-400"></i>
+              <span>+50 eventos exitosos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mensaje adicional: ¿Tienes un video de tu evento? -->
+      <div class="text-center mt-12 p-6 bg-amber-500/10 rounded-2xl border border-amber-500/20 max-w-2xl mx-auto">
+        <i class="fas fa-camera text-amber-400 text-3xl mb-3 block"></i>
+        <p class="text-gray-300">¿Celebraste con nosotros y quieres compartir tu video? <br> 
+        <span class="text-amber-400">¡Contáctanos y aparece en nuestra galería!</span></p>
       </div>
     </div>
   </section>
--->
-  <!-- SECCIÓN CONTACTO SOLO WHATSAPP + UBICACIÓN Y DATOS (sin formulario) -->
+
+  <!-- SECCIÓN CONTACTO SOLO WHATSAPP -->
   <section id="contacto" class="py-24 px-6 bg-[#0a0c10] relative overflow-hidden">
     <div class="absolute top-40 -right-20 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl"></div>
     <div class="max-w-6xl mx-auto relative z-10">
@@ -184,7 +346,6 @@
         <p class="text-gray-400 max-w-2xl mx-auto mt-3">Escríbenos por WhatsApp y nuestro equipo te asesorará con todo lo que necesites.</p>
       </div>
       
-      <!-- Tarjeta única de contacto con énfasis en WhatsApp -->
       <div class="max-w-3xl mx-auto whatsapp-card rounded-3xl p-8 md:p-10 text-center transition-all duration-300">
         <div class="flex justify-center mb-5">
           <div class="w-24 h-24 bg-amber-500/20 rounded-full flex items-center justify-center border-2 border-amber-400/40">
@@ -194,67 +355,51 @@
         <h3 class="text-2xl md:text-3xl font-bold text-white">Chatea con nosotros</h3>
         <p class="text-gray-300 mt-3 mb-6">Consulta disponibilidad, cotiza tu evento o agenda una visita al fogón. Respuesta rápida y atención personalizada.</p>
         
-        <!-- Botón WhatsApp directo -->
         <a href="https://wa.me/56994390259?text=Hola%20El%20Fogón%20de%20la%20Llave,%20quisiera%20información%20para%20un%20evento%20campestre" target="_blank" class="whatsapp-btn-main inline-flex items-center gap-3 text-white font-bold py-4 px-8 rounded-2xl text-lg transition-all shadow-xl">
           <i class="fab fa-whatsapp text-2xl"></i> Escríbenos por WhatsApp
         </a>
         
         <div class="grid md:grid-cols-2 gap-6 mt-12 text-left border-t border-white/10 pt-8">
           <div>
-            <h4 class="font-semibold text-amber-400 flex items-center gap-2"><i class="fas fa-location-dot"></i> Ubicación campestre</h4>
-            <p class="text-gray-300 text-sm mt-2">Kilometro 10.95, Primer Agua Abajo, Penco</p>
-            <!--<p class="text-gray-400 text-xs mt-1"><i class="fas fa-bus"></i> Transporte rural hasta la puerta</p>-->
+            <h4 class="font-semibold text-amber-400 flex items-center gap-2"><i class="fas fa-location-dot"></i> Ubicación</h4>
+            <p class="text-gray-300 text-sm mt-2">Kilómetro 10.95, Primer Agua Abajo, Penco, Región del Biobío</p>
           </div>
           <div>
-            <h4 class="font-semibold text-amber-400 flex items-center gap-2"><i class="fas fa-clock"></i> Horario de atención</h4>
+            <h4 class="font-semibold text-amber-400 flex items-center gap-2"><i class="fas fa-clock"></i> Horario</h4>
             <p class="text-gray-300 text-sm mt-2">Lunes a Domingo: 10:00 a 20:00 hrs</p>
             <p class="text-gray-400 text-xs">Visitas con cita previa por WhatsApp</p>
           </div>
         </div>
-        <!-- Mapa estático para referencia -->
+        
         <div class="mt-8 rounded-xl overflow-hidden border border-amber-500/30 shadow-lg">
-          <iframe  class="w-full h-52" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.261065506556!2d-72.89562172488634!3d-36.71629087227119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96685300768f784f%3A0xfa1f7adc467570cf!2sEl%20Fog%C3%B3n%20de%20la%20Llave!5e0!3m2!1ses-419!2sca!4v1775521014835!5m2!1ses-419!2sca" frameborder="0" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe class="w-full h-52" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.261065506556!2d-72.89562172488634!3d-36.71629087227119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96685300768f784f%3A0xfa1f7adc467570cf!2sEl%20Fog%C3%B3n%20de%20la%20Llave!5e0!3m2!1ses-419!2sca!4v1775521014835!5m2!1ses-419!2sca" frameborder="0" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER con glow y desarrollador (Ingeniumbright) -->
-  <footer class="relative bg-black/90 border-t border-amber-500/20 pt-16 pb-8 px-6">
+  <!-- FOOTER -->
+  <footer class="relative bg-black/90 border-t border-amber-500/20 pt-12 pb-8 px-6">
     <div class="max-w-7xl mx-auto">
-      <div class="grid md:grid-cols-4 gap-10">
-        <div class="space-y-4">
-          <div class="flex items-center gap-2">
-            <img src="assets/img/logo.jpg" alt="Logo El Fogón" class="w-10 h-10 object-contain rounded-lg" onerror="this.src='https://placehold.co/100x100?text=FG&bg=0a0c10&color=eab308'">
-            <span class="text-white font-bold text-xl">El Fogón de la Llave</span>
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3">
+          <img src="assets/img/logo.jpg" alt="Logo El Fogón" class="w-10 h-10 object-contain rounded-lg" onerror="this.src='https://placehold.co/100x100?text=FG&bg=0a0c10&color=eab308'">
+          <div>
+            <p class="text-white font-bold">El Fogón de la Llave</p>
+            <p class="text-gray-500 text-xs">Ponemos de moda la Felicidad</p>
           </div>
-          <p class="text-gray-400 text-sm">Ponemos de moda la Felicidad</p>
         </div>
-        <!--<div>
-          <h4 class="text-white font-semibold mb-4 text-lg">Explora</h4>
-          <ul class="space-y-2 text-gray-400 text-sm">
-            <li><a href="#inicio" class="hover:text-amber-400 transition">Inicio</a></li>
-            <li><a href="#servicios" class="hover:text-amber-400 transition">Servicios</a></li>
-            <li><a href="#galeria" class="hover:text-amber-400 transition">Galería</a></li>
-            <li><a href="#contacto" class="hover:text-amber-400 transition">Contacto</a></li>
-          </ul>
+        
+        <div class="flex gap-6 text-gray-400 text-sm">
+          <a href="#inicio" class="hover:text-amber-400 transition">Inicio</a>
+          <a href="#nosotros" class="hover:text-amber-400 transition">Nosotros</a>
+          <a href="#instalaciones" class="hover:text-amber-400 transition">Instalaciones</a>
+          <a href="#videos" class="hover:text-amber-400 transition">Videos</a>
+          <a href="#contacto" class="hover:text-amber-400 transition">Contacto</a>
         </div>
-        <div>
-          <h4 class="text-white font-semibold mb-4 text-lg">Contacto directo</h4>
-          <p class="text-gray-400 text-sm flex items-center gap-2"><i class="fab fa-whatsapp text-amber-400"></i> +56 9 8765 4321</p>
-          <p class="text-gray-400 text-sm mt-2 flex items-center gap-2"><i class="fas fa-envelope text-amber-400"></i> hola@elfogondelallave.cl</p>
-        </div>
-        <div>
-          <h4 class="text-white font-semibold mb-4 text-lg">Síguenos</h4>
-          <div class="flex space-x-5 text-2xl footer-glow">
-            <a href="#" class="text-gray-300 hover:text-amber-400 transition"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="text-gray-300 hover:text-amber-400 transition"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="text-gray-300 hover:text-amber-400 transition"><i class="fab fa-tiktok"></i></a>
-            <a href="#" class="text-gray-300 hover:text-amber-400 transition"><i class="fab fa-youtube"></i></a>
-          </div>
-        </div>-->
       </div>
-      <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      
+      <div class="border-t border-white/10 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
         <p class="text-gray-500 text-sm">© 2026 El Fogón de la Llave - Eventos Campestres. Todos los derechos reservados.</p>
         <div class="text-sm text-gray-400 footer-glow group">
           <span>Desarrollado por </span>
@@ -270,8 +415,8 @@
     <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-50"></div>
   </footer>
 
-  <!-- Botón flotante de WhatsApp para contacto inmediato -->
-  <a href="https://wa.me/56994390259?text=Hola%20El%20Fogón%20de%20la%20Llave,%20me%20interesa%20un%20evento" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl shadow-green-600/40 hover:bg-green-600 transition-all z-50 flex items-center justify-center gap-2 group animate-bounce-slow" style="animation: bounce 2s infinite;">
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/56994390259?text=Hola%20El%20Fogón%20de%20la%20Llave,%20me%20interesa%20un%20evento" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl shadow-green-600/40 hover:bg-green-600 transition-all z-50 flex items-center justify-center gap-2 group animate-bounce-slow">
     <i class="fab fa-whatsapp text-2xl"></i>
     <span class="hidden md:inline-block bg-black/70 text-xs px-2 py-1 rounded-full absolute right-full mr-2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition">¡Escríbenos!</span>
   </a>
@@ -287,7 +432,6 @@
   </style>
 
   <script>
-    // Mobile menu toggle
     const mobileBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     if(mobileBtn) {
@@ -295,30 +439,6 @@
     }
     document.querySelectorAll('#mobileMenu a').forEach(link => {
       link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-    });
-
-    // IntersectionObserver para animaciones de secciones
-    const fadeElements = document.querySelectorAll('.section-fade');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-    fadeElements.forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(20px)';
-      el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
-      observer.observe(el);
-    });
-    
-    // efecto hover cards
-    const cards = document.querySelectorAll('.card-hover');
-    cards.forEach(card => {
-      card.classList.add('transition-all', 'duration-300');
     });
   </script>
 </body>
