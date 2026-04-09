@@ -1,93 +1,89 @@
 {
-    "name": "El Fogón de la Llave",
-    "short_name": "Fogón Llave",
-    "description": "Centro de eventos campestres en Penco, Región del Biobío. Celebraciones familiares, cabañas con tinajas de agua caliente y entorno natural.",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#0a0c10",
-    "theme_color": "#eab308",
-    "orientation": "portrait-primary",
-    "scope": "/",
-    "lang": "es-CL",
-    "dir": "ltr",
-    "categories": ["events", "travel", "lifestyle", "family"],
-    "icons": [
-      {
-        "src": "assets/ico/android-chrome-192x192.png",
-        "sizes": "192x192",
-        "type": "image/png",
-        "purpose": "any maskable"
-      },
-      {
-        "src": "assets/ico/android-chrome-512x512.png",
-        "sizes": "512x512",
-        "type": "image/png",
-        "purpose": "any maskable"
-      },
-      {
-        "src": "assets/ico/apple-touch-icon.png",
-        "sizes": "180x180",
-        "type": "image/png",
-        "purpose": "apple touch icon"
-      },
-      {
-        "src": "assets/img/logo.jpg",
-        "sizes": "200x200",
-        "type": "image/jpeg",
-        "purpose": "any"
-      }
-    ],
-    "screenshots": [
-      {
-        "src": "assets/img/logo.jpg",
-        "sizes": "1080x1920",
-        "type": "image/jpeg",
-        "platform": "android",
-        "label": "Vista principal del sitio El Fogón de la Llave"
-      }
-    ],
-    "shortcuts": [
-      {
-        "name": "Contáctanos por WhatsApp",
-        "short_name": "Contacto",
-        "description": "Escríbenos directamente para cotizar tu evento",
-        "url": "/#contacto",
-        "icons": [
-          {
-            "src": "assets/img/logo.jpg",
-            "sizes": "96x96"
-          }
-        ]
-      },
-      {
-        "name": "Nuestras Instalaciones",
-        "short_name": "Galería",
-        "description": "Fotos de nuestras cabañas, fogón y áreas verdes",
-        "url": "/#instalaciones"
-      },
-      {
-        "name": "Cómo llegar",
-        "short_name": "Ubicación",
-        "description": "Mapa y dirección en Primer Agua, Penco",
-        "url": "/#contacto"
-      },
-      {
-        "name": "Videos del Fogón",
-        "short_name": "Videos",
-        "description": "Mira cómo se vive una celebración con nosotros",
-        "url": "/#videos"
-      }
-    ],
-    "related_applications": [
-      {
-        "platform": "web",
-        "url": "https://www.elfogondelallave.cl"
-      }
-    ],
-    "prefer_related_applications": false,
-    "display_override": ["window-controls-overlay", "standalone"],
-    "edge_side_panel": {
-      "preferred_width": 400
+  "name": "El Fogón de la Llave",
+  "short_name": "Fogón Llave",
+  "description": "Centro de eventos campestres en Penco, Región del Biobío. Celebraciones familiares, cabañas con tinajas de agua caliente y entorno natural.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0c10",
+  "theme_color": "#eab308",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "es-CL",
+  "dir": "ltr",
+  "categories": ["events", "travel", "lifestyle", "family"],
+  "icons": [
+    {
+      "src": "assets/ico/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
     },
-    "note": "El Fogón de la Llave - Emprendimiento familiar en Penco, Región del Biobío"
-  }
+    {
+      "src": "assets/ico/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/ico/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/logo.jpg",
+      "sizes": "200x200",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/img/logo.jpg",
+      "sizes": "1080x1920",
+      "type": "image/jpeg",
+      "platform": "android",
+      "label": "Vista principal del sitio El Fogón de la Llave"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Contáctanos por WhatsApp",
+      "short_name": "Contacto",
+      "description": "Escríbenos directamente para cotizar tu evento",
+      "url": "/#contacto",
+      "icons": [
+        {
+          "src": "assets/img/logo.jpg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Nuestras Instalaciones",
+      "short_name": "Galería",
+      "description": "Fotos de nuestras cabañas, fogón y áreas verdes",
+      "url": "/#instalaciones"
+    },
+    {
+      "name": "Cómo llegar",
+      "short_name": "Ubicación",
+      "description": "Mapa y dirección en Primer Agua, Penco",
+      "url": "/#contacto"
+    },
+    {
+      "name": "Videos del Fogón",
+      "short_name": "Videos",
+      "description": "Mira cómo se vive una celebración con nosotros",
+      "url": "/#videos"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://www.elfogondelallave.cl"
+    }
+  ],
+  "prefer_related_applications": false,
+  "display_override": ["window-controls-overlay", "standalone"]
+}
