@@ -6,7 +6,7 @@ html { scroll-behavior: smooth; }
 .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 35px -12px rgba(0,0,0,0.25), 0 0 0 1px rgba(234,179,8,0.2); }
 .hero-gradient {
     background: linear-gradient(105deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%),
-      url('../img/fondopantalla.jpg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+      url('../img/hero.jpg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
 
 }
 .section-fade { animation: fadeUp 0.8s ease-out forwards; }
@@ -265,6 +265,6 @@ video::-webkit-media-controls-play-button {
 @media (max-width: 768px) {
   .hero-gradient {
       background: linear-gradient(105deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 100%),
-                  url('../assets/img/hero-background-mobile.jpg') center/cover no-repeat;
+                  url('../img/hero.jpg') center/cover no-repeat;
   }
 }
