@@ -142,10 +142,6 @@ video::-webkit-media-controls-play-button:hover {
 }
 
 /* Estilo para los controles del video */
-video {
-  background-color: #000;
-}
-
 video:focus {
   outline: none;
 }
