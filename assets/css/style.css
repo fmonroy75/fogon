@@ -260,3 +260,11 @@ video::-webkit-media-controls-play-button {
   .animate-bounce-slow {
     animation: bounce 2s infinite;
   }
+
+  /* En móviles, reducir aún más la opacidad del gradiente */
+@media (max-width: 768px) {
+  .hero-gradient {
+      background: linear-gradient(105deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 100%),
+                  url('../assets/img/hero-background-mobile.jpg') center/cover no-repeat;
+  }
+}
